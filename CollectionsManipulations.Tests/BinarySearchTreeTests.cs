@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 using BookService;
 
@@ -59,6 +55,7 @@ namespace CollectionsManipulations.Tests
                 return countOfZerosX > countOfZerosY ? 1 : -1;
             }
         }
+
         public class LengthComparer : IComparer<string>
         {
             public int Compare(string first, string second)
@@ -276,7 +273,5 @@ namespace CollectionsManipulations.Tests
             List<Point> expected = new List<Point>() { point5, point4, point6, point3, point1, point2 };
             Assert.AreEqual(expected, actual);
         }
-
-        //tests for other methods
     }
 }

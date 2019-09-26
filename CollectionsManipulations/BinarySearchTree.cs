@@ -4,15 +4,20 @@ using System.Collections.Generic;
 
 namespace CollectionsManipulations
 {
+    /// <summary>
+    /// Class Binary search tree
+    /// </summary>
+    /// <typeparam name="T">type T</typeparam>
+    /// <seealso cref="System.Collections.Generic.IEnumerable{T}" />
     public class BinarySearchTree<T> : IEnumerable<T>
     {
         private class Node<T>
         {
-            public Node<T> leftChild;//?
-            public Node<T> rightChild;//?
+            public Node<T> leftChild;
+            public Node<T> rightChild;
             public T Value { get; private set; }
 
-            public Node(T value)//?
+            public Node(T value)
             {
                 Value = value;
             }
@@ -59,7 +64,11 @@ namespace CollectionsManipulations
         public BinarySearchTree() : this(null, null) { }
         #endregion
 
-        public void Add(T value)//add range!
+        /// <summary>
+        /// Adds the specified value.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        public void Add(T value)
         {
             if (head == null)
             {
@@ -73,6 +82,11 @@ namespace CollectionsManipulations
             CountOfNodes++;
         }
 
+        /// <summary>
+        /// Adds the range of values.
+        /// </summary>
+        /// <param name="values">The values.</param>
+        /// <exception cref="ArgumentNullException">Values can not be null. - values</exception>
         public void AddRange(IEnumerable<T> values)
         {
             if(values == null)
@@ -112,12 +126,22 @@ namespace CollectionsManipulations
             }
         }
 
+        /// <summary>
+        /// Clears this instance.
+        /// </summary>
         public void Clear()
         {
             head = null;
             CountOfNodes = 0;
         }
 
+        /// <summary>
+        /// Determines whether this instance contains the object.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>
+        ///   <c>true</c> if [contains] [the specified value]; otherwise, <c>false</c>.
+        /// </returns>
         public bool Contains(T value)
         {
             Node<T> current = head;
@@ -141,12 +165,24 @@ namespace CollectionsManipulations
             return false;
         }
 
+        /// <summary>
+        /// Tree traversal using preorder approach.
+        /// </summary>
+        /// <returns>sequence of nodes</returns>
         public IEnumerable<T> Preorder()
         => PreorderImplement(head);
 
+        /// <summary>
+        /// Tree traversal using postorder approach.
+        /// </summary>
+        /// <returns>sequence of nodes</returns>
         public IEnumerable<T> Postorder()
         => PostorderImplement(head);
 
+        /// <summary>
+        /// ree traversal using inorder approach.
+        /// </summary>
+        /// <returns>sequence of nodes</returns>
         public IEnumerable<T> Inorder()
         => InorderImplement(head);
 
