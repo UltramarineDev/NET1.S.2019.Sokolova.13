@@ -15,6 +15,7 @@ go to [ArrayExtension class](https://github.com/UltramarineDev/NET1.S.2019.Sokol
 * System.String (использовать сравнение по умолчанию и подключаемый компаратор);
 * пользовательский класс Book, для объектов которого реализовано отношения порядка (использовать сравнение по умолчанию и подключаемый компаратор);
 * пользовательскую структуру Point, для объектов которого не реализовано отношения порядка (использовать подключаемый компаратор).<br/>
+
 go to [BinarySearchTree class](https://github.com/UltramarineDev/NET1.S.2019.Sokolova.13/blob/master/CollectionsManipulations/BinarySearchTree.cs)
 <br/><br/>
 :heavy_check_mark: 3. (deadline - 23.04.2019, 24.00) Заполните таблицу
